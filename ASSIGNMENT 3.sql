@@ -7,7 +7,7 @@ First_name varchar(50) not null,
 Last_name varchar(50) not null,
 DOB date,
 Age int check(Age > 0),
-Last_Update date,
+Last_Update date default current_timestamp,
 Gender char(1) check(Gender in('M','F','O')),
 Department varchar(50) default('Not Given'),
 Salary int not null);
