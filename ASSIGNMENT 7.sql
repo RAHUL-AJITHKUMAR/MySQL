@@ -11,9 +11,9 @@ Area int);
 desc country;
 
 create table Persons(
-Personal_Id int,
-Fname char(20) not null,
-Lname char(20) not null,
+Personal_Id int primary key auto_increment,
+Fname varchar(20) not null,
+Lname varchar(20) not null,
 Population int,
 Rating decimal(5,2),
 Country_Id int,
@@ -43,13 +43,13 @@ Insert into Persons values
 (3,'Jim','Halpert',60609153,4.0,214,'United Kingdom'),
 (4,'Pam','Beesly',33098932,4.7,37,'Canada'),
 (5,'Ryan','Howard',1424906,3.9,73,'Gabon'),
-(6,'Stanley','Hudson',1424906,4.8,73,'NULL'),
+(6,'Stanley','Hudson',1424906,4.8,73, NULL),
 (7,'Kevin','Malone',1062777,4.6,59,'East Timor'),
 (8,'Kelly','Kapoor',1095351995,3.8,95,'India'),
 (9,'Creed','Bratton',33098932,3.6,37,'Canada'),
 (10,'Toby','Flenderson',60609153,4.2,214,'United Kingdom'),
-(11,'Oscar','Martinez',25609153,4.3,200,'NULL'),
-(12,'Angela','Martin',2060915,3.2,214,'NULL');
+(11,'Oscar','Martinez',25609153,4.3,200, NULL),
+(12,'Angela','Martin',2060915,3.2,214, NULL);
 
 select * from persons;
 
