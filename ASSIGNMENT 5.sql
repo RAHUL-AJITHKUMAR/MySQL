@@ -82,7 +82,7 @@ select count(distinct(Country_name)) as count_Distinct from Persons;
 select max(Population) as MaxPopulation from Country;
 
 # 5) query to print the minimum population from Persons table
-select min(Population) as MinPopulation from Persons;
+select Country_name,Population from persons where Population= (select min(Population) as MinPopulation from Persons);
 
 # 6)  Insert 2 new rows to the Persons table making the Lname NULL
  Insert into Persons values
