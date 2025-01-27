@@ -105,7 +105,7 @@ select Personal_Id, concat(Fname,' ',Lname) As Fullname ,Rating from persons ord
 Select Country_name, sum(Population) as TotalPopulation from Persons group by Country_name;
 
 # 12) Find countries in the Persons table with a total population greater than 50,000
-Select * from country where population > 50000; 
+SELECT Country_name FROM Persons GROUP BY Country_name HAVING SUM(Population) > 50000;
 
 # 13)  List the total number of persons and average rating for each country, but only for countries with more than 2 persons, ordered by the average rating in ascending order.
 select Country_name,count(Fname) as TotalPersons, avg(Rating) as AvgRating from persons
